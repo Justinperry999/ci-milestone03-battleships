@@ -26,19 +26,15 @@ while option != 2:
     menu()
     option = int(input("Enter your option:\n"))
 
-board = []
 
-for x in range(6):
-  board.append(["_"] * 6)
+ROWS = 6
+COLUMNS = 6
 
-def game_board(board):
-  for row in board:
-    print((" ").join(row))
+
 
 print("Welcome to the Battleships!")
 print(" ")
 print("Lets sink some ships!")
-game_board(board)
 
 print()
 play_game = input("Would you like to play? (y/n):\n")
@@ -51,15 +47,58 @@ while play_game != "y":
         print("Invalid option!")
 
 print("Initializing game...")
+print()
 
 def create_ships(board):
-    return random.randint(0, 6), random.randint(0, 6)
+    return random.randrange(ROWS), random.randrange(COLUMNS)
 
+def play_game():
 
-ship1 = create_ships(board)
-ship2 = create_ships(board)
-ship3 = create_ships(board)
-ship4 = create_ships(board)
-ship5 = create_ships(board)
-ships_left = 5
-ammo = 15
+    board = []
+
+    for x in range(6):
+        board.append(["0"] * 6)
+
+    for row in board:
+        print((" ").join(row))
+    print()
+
+    ship1 = create_ships(board)
+    ship2 = create_ships(board)
+    ship3 = create_ships(board)
+    ship4 = create_ships(board)
+    ships_left = 4
+    ammo = 10
+
+    
+    while ammo:
+        try:
+            row = int(input(f"Enter a row number between 1-{ROWS} >: "))
+            column = int(input(f"Enter a column number between 1-{COLUMNS} >: "))
+        except ValueError:
+            print("Only enter number!")
+            continue
+
+        if row not in range(1,7) or column not in range(1, 7):
+            print("\nThe numbers must be between 1-6!")
+            continue
+
+        row = row - 1 # Reducing number to desired index.
+        column = column - 1 # Reducing number to desired index.
+
+        if board[row][column] == "-" or board[row][column] == "X":
+            print("\nYou have already shoot there! Please choose another position.\n")
+            continue
+        elif (row, column) == ship1 or (row, column) == ship2 or (row, column) == ship3 or (row, column) == ship4:
+            print("\nBoom! You hit! A ship has exploded! You were granted a new ammo!\n")
+            board[row][column] = "X"
+            ships_left -= 1
+            if ships_left == 0:
+                print("My my, i didn't know you were a sharpshooter! Congratz, you won!")
+                play_again()
+        else:
+            print("\nYou missed!\n")
+            board[row][column] = "-"
+            ammo -= 1
+
+play_game()

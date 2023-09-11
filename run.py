@@ -27,8 +27,8 @@ while option != 2:
     option = int(input("Enter your option:\n"))
 
 
-ROWS = 6
-COLUMNS = 6
+ROWS = 5
+COLUMNS = 5
 
 
 
@@ -56,8 +56,8 @@ def play_game():
 
     board = []
 
-    for x in range(6):
-        board.append(["0"] * 6)
+    for x in range(5):
+        board.append(["0"] * 5)
 
     for row in board:
         print((" ").join(row))
@@ -79,7 +79,7 @@ def play_game():
             print("Only enter number!")
             continue
 
-        if row not in range(1,7) or column not in range(1, 7):
+        if row not in range(1,6) or column not in range(1, 6):
             print("\nThe numbers must be between 1-6!")
             continue
 

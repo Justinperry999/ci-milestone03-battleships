@@ -1,5 +1,14 @@
 import random
 
+ROWS = 5
+COLUMNS = 5
+board = []
+
+def welcome():
+    print("Welcome to the Battleships!")
+    print(" ")
+    print("Let's sink some ships!")
+    menu()
 
 def menu():
     """
@@ -8,49 +17,59 @@ def menu():
     print("[1] Instructions")
     print("[2] Play Battleships")
     print("[0] Exit Game")
+    menu_option()
 
-menu()
-option = int(input("Enter your option:\n"))
-
-while option != 2:
-    if option == 1:
-        #go to instructions
-        print("Instructions has been called")
-    elif option == 0:
-        #Exit Game
-        print("Thank you for playing Battleships! Goodbye!")
-    else:
-        print("Invalid option!")
-
-    print()
+def display_instructions():
+    """
+    Display game instructions for Battleships.
+    
+    This function provides a set of instructions to the player on how to play
+    the Battleships game.
+    """
+    print("Welcome to the Battleships game!")
+    print(" ")
+    print("Instructions:")
+    print("1. You are the commander of a fleet of battleships.")
+    print("2. Your goal is to sink all the enemy ships in the ocean grid.")
+    print("3. The ocean grid is a 5x5 board with coordinates from row 1, column 1 to row 5, column 5.")
+    print("4. You and the enemy will take turns firing missiles at each other's grid.")
+    print("5. You will input the coordinates of your missile target (e.g., row:1 column:1).")
+    print("6. If your missile hits an enemy ship, you will see 'Hit!' and "X" appear on the board")
+    print("7. If your missile misses, you will see 'Miss.' and a "-" apear on the board")
+    print("8. Continue taking shots until all your enemy ships are sunk and the enemy fleet is defeated!")
+    print("9. You win the game if you sink all enemy ships. You have 10 missiles, use them wisely!")
+    print("10. Good luck, Commander!")
+    print(" ")
     menu()
-    option = int(input("Enter your option:\n"))
 
-
-ROWS = 5
-COLUMNS = 5
-
-
-
-print("Welcome to the Battleships!")
-print(" ")
-print("Lets sink some ships!")
-
-print()
-play_game = input("Would you like to play? (y/n):\n")
-
-while play_game != "y":
-    if play_game == "n":
-        print("Thank you for playing Battleships! Goodbye!")
-        menu()
+def menu_option():
+    """
+    Get a valid menu option from the user.
+    
+    This method prompts the user to enter a menu option (1, 2, or 0) and
+    continues to do so until a valid option is provided.
+    
+    Returns:
+        str: The valid menu option chosen by the user.
+    """
+    option = input("Enter your option:\n")
+    while option not in ["1", "2", "0"]:
+        print("Invalid option!\n")
+        option = input("Enter your option:\n")
+    if option == "1":
+        display_instructions()
+    elif option == "2":
+        play_game()
     else:
-        print("Invalid option!")
-
-print("Initializing game...")
-print()
+        print("Goodbye!")
 
 def create_ships(board):
     return random.randrange(ROWS), random.randrange(COLUMNS)
+
+def create_board(board_to_print):
+    for row in board_to_print:
+        print((" ").join(row))
+    print()
 
 def play_game():
 
@@ -59,9 +78,7 @@ def play_game():
     for x in range(5):
         board.append(["0"] * 5)
 
-    for row in board:
-        print((" ").join(row))
-    print()
+    create_board(board)
 
     ship1 = create_ships(board)
     ship2 = create_ships(board)
@@ -70,7 +87,6 @@ def play_game():
     ships_left = 4
     ammo = 10
 
-    
     while ammo:
         try:
             row = int(input(f"Enter a row number between 1-{ROWS} >: "))
@@ -80,7 +96,7 @@ def play_game():
             continue
 
         if row not in range(1,6) or column not in range(1, 6):
-            print("\nThe numbers must be between 1-6!")
+            print("\nThe numbers must be between 1-5!")
             continue
 
         row = row - 1 # Reducing number to desired index.
@@ -90,15 +106,18 @@ def play_game():
             print("\nYou have already shoot there! Please choose another position.\n")
             continue
         elif (row, column) == ship1 or (row, column) == ship2 or (row, column) == ship3 or (row, column) == ship4:
-            print("\nBoom! You hit! A ship has exploded! You were granted a new ammo!\n")
+            print("\nBoom! You hit! A ship has exploded! You were granted another shot!\n")
             board[row][column] = "X"
             ships_left -= 1
             if ships_left == 0:
-                print("My my, i didn't know you were a sharpshooter! Congratz, you won!")
+                print("You sunk all the enemy ships! Congratulations, you won!")
                 play_again()
         else:
             print("\nYou missed!\n")
             board[row][column] = "-"
             ammo -= 1
 
-play_game()
+        # After each guess, call create_board(board) to print the updated board.
+        create_board(board)
+
+welcome()

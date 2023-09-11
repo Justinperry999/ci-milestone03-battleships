@@ -5,6 +5,9 @@ COLUMNS = 5
 board = []
 
 def welcome():
+    """
+    Display a welcome message and the main menu.
+    """
     print("Welcome to the Battleships!")
     print(" ")
     print("Let's sink some ships!")
@@ -64,14 +67,24 @@ def menu_option():
         print("Goodbye!")
 
 def create_ships(board):
+    """
+    Create random ship coordinates on the board.
+    """
     return random.randrange(ROWS), random.randrange(COLUMNS)
 
 def create_board(board_to_print):
+    """
+    Create random ship coordinates on the board.
+    
+    """
     for row in board_to_print:
         print((" ").join(row))
     print()
 
 def play_game():
+    """
+    Play the Battleships game.
+    """
 
     board = []
 

@@ -1,3 +1,48 @@
+Welcome to BattleShips, my third project. This project uses python to create a simple single player battleships game.
+
+The aim of the game is to destroy all of the computer's ships using the 10 missiles provided. Each ship is takes up a 1x1 space.
+
+The deployed version of the game can be found here.
+
+# User Experience (UX)
+
+## Project Goals
+
+## User Goals
+
+## User Expectations
+
+
+# Game Structure
+
+
+# How To Play Battleships
+
+
+# Features
+
+## Current Features
+
+## Features To Add
+
+
+# Testing
+
+## Bugs (Fixed)
+
+## Bugs (Existing)
+
+## Validator Testing
+
+
+# Deployement
+
+
+# End Product
+
+
+# Credits
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome,

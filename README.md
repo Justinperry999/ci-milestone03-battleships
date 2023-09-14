@@ -4,9 +4,17 @@
 
 Welcome to BattleShips, my third project. This project uses python to create a simple single player battleships game.
 
-The aim of the game is to destroy all of the computer's ships using the 10 missiles provided. Each ship is takes up a 1x1 space.
+The deployed version of the game can be found [here](https://ci-python-battleships-f474d146740d.herokuapp.com/).
 
-The deployed version of the game can be found here.
+## How To Play Battleships
+
+This is a simple version of the classic pen and paper game of battleships.
+
+In this version, one board which is 5x5 is displayed to the user. 
+
+On this board there have been placed 4 enemy ships which take up one space.
+
+The user will have 15 guesses to try and destroy the 4 ships before losing the game.
 
 ## **User Experience (UX)**
 
@@ -39,22 +47,67 @@ In the design phase of my project I used [LucidChart](https://www.lucidchart.com
 
 <img src="/documentation_assets/images/battleships_logic.png" alt="Battleships logic">
 
-## How To Play Battleships
-
-This is a simple version of the classic pen and paper game of battleships.
-
-In this version, one board which is 5x5 is displayed to the user. 
-
-On this board there have been placed 4 enemy ships which take up one space.
-
-The user will have 15 guesses to try and destroy the 4 ships before losing the game.
-
 ## Features
 
 ### Current Features
 
+- Battleships menu
+    - Play game
+    - Instructions
+    - Exit game
+
+<img src="/documentation_assets/images/battleships_menu.png" alt="Battleships menu">
+
+Instructions
+- Explaining how to play the game in a fun way to captivate the user.
+
+<img src="/documentation_assets/images/battleships_instructions.png" alt="Battleships instructions">
+
+Exit game
+
+<img src="/documentation_assets/images/battleships_exit.png" alt="Battleships exit game">
+
+Hit battleship
+- An 'X' will appear on the board and a message saying "Boom! You hit! A ship has exploded! You were granted another shot!" will appear.
+
+<img src="/documentation_assets/images/battleships_youhit.png" alt="Battleships you hit">
+
+Missed battleship
+- An '-' will appear on the board and a message saying "You missed!" will appear.
+
+<img src="/documentation_assets/images/battleships_youmissed.png" alt="Battleships you missed">
+
+Won game
+- When all 4 ships have been sunk you win and a message saying "You sunk all the enemy ships! Congratulations, you won!" will appear.
+
+<img src="/documentation_assets/images/battleships_youwon.png" alt="Battleships you won">
+
+Lost game
+- If you fail to sink the ships in 15 shots you lose and a message saying "Game over! You ran out of ammo, and the enemy ships are still afloat. Better luck next time!" will appear.
+
+<img src="/documentation_assets/images/battleships_youlost.png" alt="Battleships you lost">
+
+- Input Validation
+
+Only enter a number
+
+- You can only enter numbers in the input fields or an error message will appear.
+
+<img src="/documentation_assets/images/battleships_onlyenternumber.png" alt="Battleships only enter a number">
+
+Already shot there
+
+- If you input a coordinate that has already been placed then an error message will appear.
+
+<img src="/documentation_assets/images/battleships_aleadyplaced.png" alt="Battleships already placed there">
+
 ### Features To Add
 
+- To add a computer board and take turns in attacking eachothers ships.
+
+- To have the option for the user to choose from different grid sizes.
+
+- To have the option for the user to place their ships on the board.
 
 ## Testing
 

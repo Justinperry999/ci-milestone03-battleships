@@ -54,7 +54,7 @@ def display_instructions():
     print("6. If your missile hits an enemy ship, you will see 'Hit!' and an 'X' will appear on the board")
     print("7. If your missile misses, you will see 'Miss.' and a '-' will appear on the board")
     print("8. Continue taking shots until all of the enemy ships are sunk and the enemy fleet is defeated!")
-    print("9. You win the game if you sink all enemy ships. You have 10 missiles, use them wisely!")
+    print("9. You win the game if you sink all enemy ships. You have 15 missiles, use them wisely!")
     print("10. Good luck, Commander!")
     print(" ")
     print("----------------------------")
@@ -115,12 +115,12 @@ def play_game():
     ship3 = create_ships(board)
     ship4 = create_ships(board)
     ships_left = 4
-    ammo = 10
+    ammo = 15
 
     while ammo:
         try:
-            row = int(input(f"Enter a row number between 1-{ROWS} >: "))
-            column = int(input(f"Enter a column number between 1-{COLUMNS} >: "))
+            row = int(input(f"Enter a row number between 1-{ROWS} >: \n"))
+            column = int(input(f"Enter a column number between 1-{COLUMNS} >: \n"))
         except ValueError:
             print("Only enter number!\n")
             continue

@@ -8,44 +8,70 @@ The aim of the game is to destroy all of the computer's ships using the 10 missi
 
 The deployed version of the game can be found here.
 
-# **User Experience (UX)**
+## **User Experience (UX)**
 
-## Project Goals
+### Project Goals
 
-## User Goals
+The main focus of Battleships is to create a entertaining game for the user that is both engaging and interactive. My project should display the basic use of the Python language.
 
-## User Expectations
+### User Goals
+
+First Time User
+
+As a first-time user, I want to be engaged and enjoy playing the game.
+As a first-time user, the game should spark a positive emotion.
+As a first-time user, I would like the instruction to be clear so I fully understand how to play.
+As a first-time user, the game shouldn't be to difficult to win.
+
+Returning Visitor User
+
+As a Returning Visitor, I want to have another enjoyable experience and win at the game.
+
+### User Expectations
+
+- The game is enjoyable to play.
+- The rules are easy to follow.
+- To want to come back and play again.
+
+## Game Structure
+
+In the design phase of my project I used [LucidChart](https://www.lucidchart.com/) to create the logic of my battleships game.
+
+<img src="/documentation_assets/images/battleships_logic.png" alt="Battleships logic">
+
+## How To Play Battleships
+
+This is a simple version of the classic pen and paper game of battleships.
+
+In this version, one board which is 5x5 is displayed to the user. 
+
+On this board there have been placed 4 enemy ships which take up one space.
+
+The user will have 15 guesses to try and destroy the 4 ships before losing the game.
+
+## Features
+
+### Current Features
+
+### Features To Add
 
 
-# Game Structure
+## Testing
+
+### Bugs (Fixed)
+
+### Bugs (Existing)
+
+### Validator Testing
 
 
-# How To Play Battleships
+## Deployement
 
 
-# Features
-
-## Current Features
-
-## Features To Add
+## End Product
 
 
-# Testing
-
-## Bugs (Fixed)
-
-## Bugs (Existing)
-
-## Validator Testing
-
-
-# Deployement
-
-
-# End Product
-
-
-# Credits
+## Credits
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 

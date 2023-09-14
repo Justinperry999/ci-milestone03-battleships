@@ -1,10 +1,14 @@
+# **Battleships Game**
+
+<img src="/documentation_assets/images/battleships_responsive.png" alt="Main readme photo">
+
 Welcome to BattleShips, my third project. This project uses python to create a simple single player battleships game.
 
 The aim of the game is to destroy all of the computer's ships using the 10 missiles provided. Each ship is takes up a 1x1 space.
 
 The deployed version of the game can be found here.
 
-# User Experience (UX)
+# **User Experience (UX)**
 
 ## Project Goals
 

@@ -109,52 +109,64 @@ Already shot there
 
 - To have the option for the user to place their ships on the board.
 
-## Testing
+## **Testing**
+
+### Manual Testing
+
+- I used print statements throughout my code to make sure my functions were working correctly.
+- I ran my code through the terminal regularly to make sure there were no errors and everything was working correctly.
+- When creating value errors in my code I tested this by inputting incorrect data to make sure the correct error message was coming up. 
 
 ### Bugs (Fixed)
 
+- when running my code through the terminal I recieved the error message "TypeError: 'function' object is not subscriptable". I fixed this by changing the name of the function as I had a variable the same name.
+
+- when running my code through the terminal I recieved the error message "TypeError: create_board() missing 1 required positional argument: 'board_to_print'". I fixed this by adding the argument 'board' into the function as this was missing.
+
 ### Bugs (Existing)
+
+no existing bugs. All errors were corrected.
 
 ### Validator Testing
 
+I ran my code through the PEP8 validator to validate my code
+
+Before:
+
+<img src="/documentation_assets/images/pep8_before.png" alt="pep8 before errors were fixed">
+
+I fixed all the error messages by:
+
+- Removing any trailing whitespace.
+- Adding an extra \ to remove the 'invalid escape sequence' error message
+- Adding another space above the functions to fix the 'expected 2 blank lines, found 1' error message
+- Adapting or shortening any code or strings that were too long.
+
+After:
+
+<img src="/documentation_assets/images/noerrors.png" alt="pep8 no errors">
 
 ## Deployement
 
+I used Heroku to deploy my project. I did this by:
+
+- Push final commits to Github.
+- Log on to [Heroku](https://www.heroku.com).
+- Select 'New' in the top right corner.
+- Select 'Create new app'.
+- Enter a name for the app and select Europe as the region.
+- Go to the 'Settings' tab.
+- Click 'Add buildpack'.
+- Select 'Python', then 'Save changes'.
+- Select 'Nodejs', then 'Save changes'.
+- Making sure to add Python first and Nodejs second.
+- Go to the 'Deploy' tab.
+- Connect to GitHub.
+- Search for the Github repository and connect.
+- At the bottom under Manual Deploy, click 'Deploy branch'.
 
 ## End Product
 
 
 ## Credits
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
-
-## Reminders
-
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!

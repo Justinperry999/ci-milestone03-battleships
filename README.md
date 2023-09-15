@@ -144,7 +144,7 @@ I fixed all the error messages by:
 
 After:
 
-<img src="/documentation_assets/images/noerrors.png" alt="pep8 no errors">
+<img src="/documentation_assets/images/battleships_noerrors.png" alt="pep8 no errors">
 
 ## Deployement
 

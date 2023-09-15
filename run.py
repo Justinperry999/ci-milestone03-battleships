@@ -132,7 +132,11 @@ def play_game():
     while ammo:
         try:
             row = int(input(f"Enter a row number between 1-{ROWS} >: "))
-            column = int(input(f"Enter a column number between 1-{COLUMNS} >: "))
+            column = int(
+                input(
+                    f"Enter a column number between 1-{COLUMNS} >: "
+                )
+            )
         except ValueError:
             print("Only enter number!\n")
             continue
@@ -145,25 +149,51 @@ def play_game():
         column = column - 1  # Reducing number to desired index.
 
         if board[row][column] == "-" or board[row][column] == "X":
-            print("\nYou have already shoot there! Please choose another position.\n")
+            print(
+                "\n{} {}\n".format(
+                    "You have already shoot there!",
+                    "Please choose another position.",
+                )
+            )
             continue
-        elif (row, column) == ship1 or (row, column) == ship2 or (row, column) == ship3 or (row, column) == ship4:
-            print("\nBoom! You hit! A ship has exploded! You were granted another shot!\n")
+        elif (
+            (row, column) == ship1 or
+            (row, column) == ship2 or
+            (row, column) == ship3 or
+            (row, column) == ship4
+        ):
+            print(
+                "\n{} {}\n".format(
+                    "Boom! You hit! A ship has exploded!",
+                    "You were granted another shot!",
+                )
+            )
             board[row][column] = "X"
             ships_left -= 1
             if ships_left == 0:
-                print("You sunk all the enemy ships! Congratulations, you won!\n")
+                print(
+                    "You sunk all the enemy ships! {}\n".format(
+                        "Congratulations, you won!",
+                    )
+                )
                 menu()
         else:
             print("\nYou missed!\n")
             board[row][column] = "-"
             ammo -= 1
 
-        # After each guess, call create_board(board) to print the updated board.
+        # After each guess, call create_board(board)
+        # to print the updated board.
         create_board(board)
 
     # End of game message if the user doesn't sink all the ships.
-    print("Game over! You ran out of ammo, and the enemy ships are still afloat. Better luck next time!")
+    print(
+        "{}{}{}".format(
+            "Game over! You ran out of ammo, ",
+            "and the enemy ships are still afloat. ",
+            "Better luck next time!",
+        )
+    )
     print()
     menu()
 

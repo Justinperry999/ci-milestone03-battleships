@@ -117,6 +117,24 @@ Already shot there
 - I ran my code through the terminal regularly to make sure there were no errors and everything was working correctly.
 - When creating value errors in my code I tested this by inputting incorrect data to make sure the correct error message was coming up. 
 
+    Menu
+
+    | **User Interaction**        | **Outcome**                                                                                   | **Pass/Fail** |
+    | --------------------------- | --------------------------------------------------------------------------------------------- | ------------- |
+    | Input '1'                   | Navigate to Instructions page.                                                                | Pass          |
+    | Input '2'                   | Initiates the battleships game to be played.                                                  | Pass          |
+    | Input '0'                   | Exits the game.                                                                               | Pass          |
+    | Input anything else         | Shows a 'Invalid option' error message.                                                       | Pass          |
+
+    Game
+
+    | **User Interaction**                 | **Outcome**                                                                                   | **Pass/Fail** |
+    | ------------------------------------ | --------------------------------------------------------------------------------------------- | ------------- |
+    | Input a number for row and column    | Battleship placed on the grid with either a hit or a miss.                                    | Pass          |
+    | Input a number not between 1 and 5   | Shows a 'The numbers must be between 1-5!' error message.                                     | Pass          |
+    | Input anything but a number          | Shows a 'Only enter a number' error message.                                                  | Pass          |
+    | Input the same co-ordinates twice    | Shows a 'You have already shoot there!, please choose another position' error message.        | Pass          |
+
 ### Bugs (Fixed)
 
 - when running my code through the terminal I recieved the error message "TypeError: 'function' object is not subscriptable". I fixed this by changing the name of the function as I had a variable the same name.

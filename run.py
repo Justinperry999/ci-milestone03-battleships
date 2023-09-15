@@ -138,7 +138,7 @@ def play_game():
                 )
             )
         except ValueError:
-            print("Only enter number!\n")
+            print("Only enter a number!\n")
             continue
 
         if row not in range(1, 6) or column not in range(1, 6):

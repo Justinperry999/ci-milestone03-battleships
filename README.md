@@ -167,6 +167,38 @@ I used Heroku to deploy my project. I did this by:
 
 ## End Product
 
+Below is the final outcome of my project:
+
+Opening Page/Menu
+
+<img src="/documentation_assets/images/battleships_menu.png" alt="Battleships menu">
+
+Instructions
+
+<img src="/documentation_assets/images/battleships_instructions.png" alt="Battleships instructions">
+
+Play Game
+
+<img src="/documentation_assets/images/battleships_playgame.png" alt="Battleships play game">
+
+Hit Ship
+
+<img src="/documentation_assets/images/battleships_youhit.png" alt="Battleships hit ship">
+
+Missed Ship
+
+<img src="/documentation_assets/images/battleships_youmissed.png" alt="Battleships missed ship">
+
+Winning Game Page
+
+<img src="/documentation_assets/images/battleships_youwon.png" alt="Battleships winning game page">
+
+Losing Game Page
+
+<img src="/documentation_assets/images/battleships_youlost.png" alt="Battleships losing game page">
+
 
 ## Credits
+ - Code Institute - Learning resources and deployment instructions.
+ - My Mentor Marcel - Great support with regular check ins.
 

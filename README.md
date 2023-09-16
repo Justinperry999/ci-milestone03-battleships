@@ -51,6 +51,9 @@ In the design phase of my project I used [LucidChart](https://www.lucidchart.com
 
 ### Current Features
 
+- Code
+    - I imported the random module by using 'import random' to generate ships at random.
+
 - Battleships menu
     - Play game
     - Instructions
